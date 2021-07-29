@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>e-Food</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="container text-center">
+            <h2 class="text-uppercase py-4">L o g i n</h2>
+            <form class="needs-validation" novalidate>
+              <div class="form-group pb-4">
+                <label for="uname">Username:</label>
+                <input type="text" class="border-bottom-0" id="uname" placeholder="Enter username" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-group pb-4">
+                <label for="pwd">Password:</label>
+                <input type="password" class="border-bottom-0" id="pwd" placeholder="Enter password" name="pwd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback" >Please fill out this field.</div>
+              </div>
+              <button type="submit" class="btn btn-success mb-4">Success</button>
+            </form>
+        </div>
+          
+          <script>
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+    </body>
+</html>
